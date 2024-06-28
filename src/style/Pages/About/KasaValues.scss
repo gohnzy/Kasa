@@ -1,0 +1,57 @@
+@import "../../Bases/Variables.scss";
+@import "../../Bases/Dropdown.scss";
+
+section#values {
+    margin: auto;
+
+    & ul {
+        padding: 0;
+         
+
+        & li {
+            position: relative;
+            width: 1023px;
+            height: 54px;
+            list-style: none;
+            margin-bottom: 45px;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out; 
+
+            @include dropdown;
+            & div {
+                height: 54px;
+                background-color: $mainColor;
+                border-radius: 5px;
+                color: white;
+                font-weight: 700;
+                font-size: 24px;
+                text-align: start;
+                padding: 12px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & img {
+                    width: 25px;
+                    height: 14px;
+                }
+            }
+
+
+            & p {
+                position: relative;
+                transform: scaleY(0);
+                transform-origin: top;
+                background-color: $contrastColor;
+                color: black;
+                font-size: 16px;
+                border-radius: 0 0 5px 5px;
+                padding: 15px;
+                // box-sizing: border-box;
+                margin: 0;
+                transition: transform 0.3s ease-in-out; 
+            }
+        }
+    }
+}

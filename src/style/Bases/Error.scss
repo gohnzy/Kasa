@@ -1,0 +1,27 @@
+@import '../Bases/Variables.scss';
+
+main#ErrorPage {
+    margin: auto;
+    width: fit-content;
+
+    & * {
+        color: $mainColor;
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    & h1 {
+        font-size: 288px;
+        font-weight: 700;
+    }
+
+    & h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    & a {
+        color: black;
+        font-weight: 500;
+    }
+}

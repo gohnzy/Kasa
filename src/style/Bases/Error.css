@@ -1,0 +1,26 @@
+* {
+  font-family: Montserat;
+}
+
+main#ErrorPage {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main#ErrorPage * {
+  color: #ff6060;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+main#ErrorPage h1 {
+  font-size: 288px;
+  font-weight: 700;
+}
+main#ErrorPage h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+main#ErrorPage a {
+  color: black;
+  font-weight: 500;
+}/*# sourceMappingURL=Error.css.map */

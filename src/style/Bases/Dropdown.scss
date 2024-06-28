@@ -1,0 +1,30 @@
+@mixin dropdown {
+    &.active {
+        height: 120px; 
+        transition: height 0.3s ease-in-out; 
+    }
+
+    &.active:nth-child(4) {
+        height: 200px; 
+        transition: height 0.3s ease-in-out; 
+    }
+
+    &.active img {
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &.active p {
+        transform: scaleY(1);
+        opacity: 1;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:not(.active) p {
+        transition: 0.3s ease-in-out;
+    }
+
+    &:not(.active) img {
+        transition: transform 0.3s ease-in-out;
+    }
+}

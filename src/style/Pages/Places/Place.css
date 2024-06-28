@@ -1,0 +1,97 @@
+* {
+  font-family: Montserat;
+}
+
+main#place {
+  max-width: 1240px;
+  margin: auto;
+  gap: 0;
+}
+main#place img {
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+}
+main#place section#infos-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+main#place section#infos-banner div#place-infos {
+  color: #ff6060;
+}
+main#place section#infos-banner div#place-infos h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+}
+main#place section#infos-banner div#place-infos h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+main#place section#infos-banner div#place-infos ul {
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+}
+main#place section#infos-banner div#place-infos ul li {
+  padding: 5px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ff6060;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+main#place section#infos-banner div#host-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+}
+main#place section#infos-banner div#host-infos img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+main#place section#infos-banner div#host-infos .star {
+  width: 24.75px;
+  height: 24px;
+}
+main#place section#infos-dropdown {
+  padding: 30px;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+main#place section#infos-dropdown div {
+  max-width: 582px;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #ff6060;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main#place section#infos-dropdown div img {
+  width: 24px;
+  height: 14px;
+}/*# sourceMappingURL=Place.css.map */

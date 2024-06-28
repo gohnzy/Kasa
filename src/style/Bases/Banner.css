@@ -1,0 +1,31 @@
+section#banner {
+  margin: auto;
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
+  max-height: 223px;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.25);
+}
+section#banner img {
+  position: relative;
+  filter: brightness(40%);
+  width: 1240px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 0 -300px;
+     object-position: 0 -300px;
+}
+section#banner h1 {
+  position: absolute;
+  width: 80%;
+  top: 20%;
+  left: 10%;
+  text-align: center;
+  color: white;
+  font-family: Montserat;
+  font-weight: 700;
+  font-size: 48px;
+  text-shadow: 0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0 0.5px 0 #000, 0.5px 0 0 #000, -0.5px 0 0 #000, 0 -0.5px 0 #000, 4px 4px rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=Banner.css.map */

@@ -1,0 +1,72 @@
+* {
+  font-family: Montserat;
+}
+
+section#values {
+  margin: auto;
+}
+section#values ul {
+  padding: 0;
+}
+section#values ul li {
+  position: relative;
+  width: 1023px;
+  height: 54px;
+  list-style: none;
+  margin-bottom: 45px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+section#values ul li.active {
+  height: 120px;
+  transition: height 0.3s ease-in-out;
+}
+section#values ul li.active:nth-child(4) {
+  height: 200px;
+  transition: height 0.3s ease-in-out;
+}
+section#values ul li.active img {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
+}
+section#values ul li.active p {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+section#values ul li:not(.active) p {
+  transition: 0.3s ease-in-out;
+}
+section#values ul li:not(.active) img {
+  transition: transform 0.3s ease-in-out;
+}
+section#values ul li div {
+  height: 54px;
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: start;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#values ul li div img {
+  width: 25px;
+  height: 14px;
+}
+section#values ul li p {
+  position: relative;
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: #f6f6f6;
+  color: black;
+  font-size: 16px;
+  border-radius: 0 0 5px 5px;
+  padding: 15px;
+  margin: 0;
+  transition: transform 0.3s ease-in-out;
+}/*# sourceMappingURL=KasaValues.css.map */

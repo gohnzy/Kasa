@@ -35,6 +35,11 @@ header nav {
   gap: 50px;
   align-items: center;
 }
+@media (max-width: 420px) {
+  header nav {
+    justify-content: end;
+  }
+}
 header nav a {
   font-family: Montserat;
   font-weight: 500;

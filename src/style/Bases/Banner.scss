@@ -7,12 +7,24 @@ section#banner {
     overflow: hidden;
     border-radius: 25px;
     box-shadow: 1px 1px 10px 0 rgba($color: #000000, $alpha: 0.25);
+    @media (max-width:767px) {
+        border-radius: 10px;
+        height: 111px;
+        
+    }
     & img {
         position: relative;
         filter: brightness(40%);
-        width: 1240px;
-        object-fit: fill;
-        object-position: 0 -300px;
+        max-width: 1240px;
+        width: 100%;
+        height: 223px;
+        object-fit: cover;
+        object-position: 10% 50%;
+
+        @media (max-width:767px) {
+            height: 111px;
+            
+        }
 
     }
     & h1 {
@@ -35,5 +47,27 @@ section#banner {
         -0.5px 0 0 #000,  
         0 -0.5px 0 #000,   
         4px 4px rgba(0,0,0,0.25); 
+
+        @media (max-width:935px) {
+            font-size: 42px;
+            top: 20%;
+        }
+
+        @media (max-width:770px) {
+            font-size: 28px;
+            text-align: start;
+            top: 10%;
+        }
+        @media (max-width:585px) {
+            font-size: 24px;
+            top: 20%;
+        }
+        @media (max-width:500px) {
+            top: 10%;
+        }
+        @media (max-width:438px) {
+            font-size: 24px;
+            text-align: start;
+        }
     }
 }

@@ -12,6 +12,12 @@ footer {
         
         width: 122px;
         height: 39.5px;
+
+        @media (max-width:500px) {
+            width: 102px;
+            height: 19.5px;
+        }
+
     }
 
     & p {
@@ -20,6 +26,11 @@ footer {
         font-size: 24px;
         text-align: center;
         color: white;
+
+        @media (max-width:500px) {
+            font-size: 13px;
+            width: 150px;
+        }
     }
 
 }

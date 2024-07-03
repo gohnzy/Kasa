@@ -9,27 +9,51 @@ section#values ul {
   padding: 0;
 }
 section#values ul li {
-  position: relative;
-  width: 1023px;
+  max-width: 1024px;
+  width: 100%;
   height: 54px;
   list-style: none;
   margin-bottom: 45px;
-  overflow: hidden;
   transition: height 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  section#values ul li {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 500px) {
+  section#values ul li {
+    margin-bottom: 0px;
+  }
 }
 section#values ul li.active {
   height: 120px;
   transition: height 0.3s ease-in-out;
 }
+@media (max-width: 490px) {
+  section#values ul li.active {
+    height: 130px;
+  }
+}
 section#values ul li.active:nth-child(4) {
   height: 200px;
   transition: height 0.3s ease-in-out;
+}
+@media (max-width: 430px) {
+  section#values ul li.active:nth-child(4) {
+    height: 250px;
+  }
 }
 section#values ul li.active img {
   transform: rotate(-180deg);
   transition: transform 0.3s ease-in-out;
 }
 section#values ul li.active p {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+section#values ul li.active p#equipements-list {
   transform: scaleY(1);
   opacity: 1;
   transition: transform 0.3s ease-in-out;
@@ -54,9 +78,33 @@ section#values ul li div {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 767px) {
+  section#values ul li div {
+    height: 42px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  section#values ul li div {
+    height: 30px;
+    font-size: 13px;
+  }
+}
 section#values ul li div img {
   width: 25px;
   height: 14px;
+}
+@media (max-width: 767px) {
+  section#values ul li div img {
+    width: 21px;
+    height: 11px;
+  }
+}
+@media (max-width: 500px) {
+  section#values ul li div img {
+    width: 16px;
+    height: 9px;
+  }
 }
 section#values ul li p {
   position: relative;
@@ -69,4 +117,14 @@ section#values ul li p {
   padding: 15px;
   margin: 0;
   transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  section#values ul li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  section#values ul li p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=KasaValues.css.map */

@@ -21,6 +21,14 @@ section#gallery {
     padding: 40px;
   }
 }
+@media (max-width: 770px) {
+  section#gallery {
+    gap: 30px;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+}
 section#gallery a {
   display: flex;
   text-decoration: none;
@@ -34,6 +42,16 @@ section#gallery a {
   section#gallery a {
     width: 300px;
     height: 300px;
+  }
+}
+@media (max-width: 770px) {
+  section#gallery a {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  section#gallery a {
+    height: 255px;
   }
 }
 section#gallery a:hover {
@@ -71,9 +89,4 @@ section#gallery a h2 {
   font-size: 18px;
   flex: 0 0 20%;
   background: -webkit-linear-gradient(bottom, #cd4f4f, #ff6060);
-}
-@media (max-width: 1240px) {
-  section#gallery a h2 {
-    font-size: 16px;
-  }
 }/*# sourceMappingURL=Gallery.css.map */

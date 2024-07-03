@@ -7,10 +7,76 @@ main#place {
   margin: auto;
   gap: 0;
 }
-main#place img {
-  width: 1240px;
+main#place div#place-gallery img#displayed-image {
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
   height: 415px;
   border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 80%;
+     object-position: 0 80%;
+  font-size: 8px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  main#place div#place-gallery img#displayed-image {
+    height: 255px;
+  }
+}
+main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#right-arrow {
+  position: absolute;
+  top: 38%;
+  cursor: pointer;
+  width: 47px;
+  height: 79px;
+}
+@media (max-width: 767px) {
+  main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#right-arrow {
+    width: 24px;
+    height: 40px;
+    top: 31%;
+  }
+}
+@media (max-width: 500px) {
+  main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#right-arrow {
+    width: 12px;
+    height: 20px;
+    top: 33%;
+  }
+}
+main#place div#place-gallery img#left-arrow {
+  transform: rotate(-90deg);
+  left: 12%;
+}
+@media (max-width: 767px) {
+  main#place div#place-gallery img#left-arrow {
+    left: 8%;
+  }
+}
+main#place div#place-gallery img#right-arrow {
+  transform: rotate(90deg);
+  right: 12%;
+}
+@media (max-width: 767px) {
+  main#place div#place-gallery img#right-arrow {
+    right: 8%;
+  }
+}
+main#place div#place-gallery #picture-count {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  color: white;
+  font-style: normal;
+  font-size: 18px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 767px) {
+  main#place div#place-gallery #picture-count {
+    display: none;
+  }
 }
 main#place section#infos-banner {
   display: flex;
@@ -19,6 +85,13 @@ main#place section#infos-banner {
   padding: 30px;
   box-sizing: border-box;
 }
+@media (max-width: 767px) {
+  main#place section#infos-banner {
+    flex-direction: column;
+    align-items: start;
+    padding: 15px 0;
+  }
+}
 main#place section#infos-banner div#place-infos {
   color: #ff6060;
 }
@@ -26,11 +99,32 @@ main#place section#infos-banner div#place-infos h1 {
   font-size: 36px;
   font-weight: 500;
   margin: 0;
+  max-width: 770px;
+}
+@media (max-width: 767px) {
+  main#place section#infos-banner div#place-infos h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-banner div#place-infos h1 {
+    font-size: 18px;
+  }
 }
 main#place section#infos-banner div#place-infos h2 {
   font-size: 18px;
   font-weight: 500;
   color: black;
+}
+@media (max-width: 767px) {
+  main#place section#infos-banner div#place-infos h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-banner div#place-infos h2 {
+    font-size: 14px;
+  }
 }
 main#place section#infos-banner div#place-infos ul {
   padding: 0;
@@ -38,10 +132,10 @@ main#place section#infos-banner div#place-infos ul {
   gap: 15px;
   justify-content: start;
   align-items: center;
-  list-style: none;
 }
 main#place section#infos-banner div#place-infos ul li {
-  padding: 5px 20px;
+  padding: 3px 20px;
+  height: 25px;
   box-sizing: border-box;
   text-align: center;
   width: -moz-fit-content;
@@ -52,46 +146,268 @@ main#place section#infos-banner div#place-infos ul li {
   font-weight: 700;
   border-radius: 10px;
 }
+@media (max-width: 767px) {
+  main#place section#infos-banner div#place-infos ul li {
+    height: 21px;
+    padding: 1px 20px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-banner div#place-infos ul li {
+    height: 18px;
+    padding: 0 20px;
+  }
+}
 main#place section#infos-banner div#host-infos {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: end;
+  width: 100%;
+  max-width: 196px;
 }
-main#place section#infos-banner div#host-infos img {
+@media (max-width: 767px) {
+  main#place section#infos-banner div#host-infos {
+    max-width: 767px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main#place section#infos-banner div#host-infos #profil {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  main#place section#infos-banner div#host-infos #profil {
+    justify-content: end;
+  }
+}
+main#place section#infos-banner div#host-infos #profil h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  width: 90px;
+  text-align: end;
+  width: 80px;
+}
+main#place section#infos-banner div#host-infos #profil img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
 }
-main#place section#infos-banner div#host-infos .star {
+@media (max-width: 767px) {
+  main#place section#infos-banner div#host-infos #host-rating {
+    min-width: 98px;
+    width: 50%;
+  }
+}
+main#place section#infos-banner div#host-infos #host-rating .star {
   width: 24.75px;
   height: 24px;
 }
+@media (max-width: 767px) {
+  main#place section#infos-banner div#host-infos #host-rating .star {
+    width: 18.8px;
+    height: 18px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-banner div#host-infos #host-rating .star {
+    width: 13.41px;
+    height: 13px;
+  }
+}
 main#place section#infos-dropdown {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+}
+main#place section#infos-dropdown ul {
   padding: 30px;
   box-sizing: border-box;
   margin: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   gap: 50px;
 }
-main#place section#infos-dropdown div {
+@media (max-width: 767px) {
+  main#place section#infos-dropdown ul {
+    flex-direction: column;
+    max-width: 1240px;
+    padding: 0px;
+    gap: 0;
+  }
+}
+main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
+  position: relative;
   max-width: 582px;
   width: 100%;
-  height: 52px;
   border-radius: 10px;
-  background-color: #ff6060;
   color: white;
   font-size: 18px;
   font-weight: 700;
-  padding: 10px 20px 10px 10px;
-  box-sizing: border-box;
+  position: relative;
+  height: 54px;
+  margin-bottom: 45px;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
+    height: 41px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
+    height: 30px;
+  }
+}
+main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+  height: 200px;
+  transition: height 0.3s ease-in-out;
+}
+@media (max-width: 605px) {
+  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+    height: 130px;
+  }
+}
+@media (max-width: 580px) {
+  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+    height: 135px;
+  }
+}
+@media (max-width: 490px) {
+  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+    height: 150px;
+  }
+}
+@media (max-width: 420px) {
+  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+    height: 160px;
+  }
+}
+@media (max-width: 405px) {
+  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
+    height: 170px;
+  }
+}
+main#place section#infos-dropdown ul article#description.active:nth-child(4), main#place section#infos-dropdown ul article#furnitures.active:nth-child(4) {
+  height: 200px;
+  transition: height 0.3s ease-in-out;
+}
+@media (max-width: 430px) {
+  main#place section#infos-dropdown ul article#description.active:nth-child(4), main#place section#infos-dropdown ul article#furnitures.active:nth-child(4) {
+    height: 250px;
+  }
+}
+main#place section#infos-dropdown ul article#description.active img, main#place section#infos-dropdown ul article#furnitures.active img {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
+}
+main#place section#infos-dropdown ul article#description.active p, main#place section#infos-dropdown ul article#furnitures.active p {
+  overflow-y: auto;
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+main#place section#infos-dropdown ul article#description.active p#equipements-list, main#place section#infos-dropdown ul article#furnitures.active p#equipements-list {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+main#place section#infos-dropdown ul article#description:not(.active) p, main#place section#infos-dropdown ul article#furnitures:not(.active) p {
+  transition: 0.3s ease-in-out;
+}
+main#place section#infos-dropdown ul article#description:not(.active) img, main#place section#infos-dropdown ul article#furnitures:not(.active) img {
+  transition: transform 0.3s ease-in-out;
+}
+main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
+  background-color: #ff6060;
+  height: 52px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-main#place section#infos-dropdown div img {
+@media (max-width: 767px) {
+  main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
+    height: 41px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
+    height: 30px;
+    font-size: 13px;
+  }
+}
+main#place section#infos-dropdown ul article#description img, main#place section#infos-dropdown ul article#furnitures img {
   width: 24px;
   height: 14px;
+}
+@media (max-width: 500px) {
+  main#place section#infos-dropdown ul article#description img, main#place section#infos-dropdown ul article#furnitures img {
+    width: 16px;
+    height: 9px;
+  }
+}
+main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
+  position: relative;
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: #f6f6f6;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0;
+  transition: transform 0.3s ease-in-out;
+  height: 150px;
+  overflow: auto;
+}
+@media (max-width: 767px) {
+  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
+    padding: 15px 15px 35px 15px;
+  }
+}
+main#place section#infos-dropdown ul article#description p li, main#place section#infos-dropdown ul article#furnitures p li {
+  list-style-position: inside;
+  margin-left: -15px;
+}
+@media (max-width: 767px) {
+  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
+    font-size: 12px;
+  }
+}
+main#place section#infos-dropdown ul article#description p::-webkit-scrollbar, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar {
+  width: 8px;
+}
+main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-track, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-track {
+  background: transparent;
+}
+main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-thumb, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+  border-radius: 25px;
+}
+main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-thumb:hover, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-thumb:hover {
+  background: #949494;
+}
+main#place section#infos-dropdown ul article#description p li, main#place section#infos-dropdown ul article#furnitures p li {
+  padding-left: 15px;
+  height: 20px;
 }/*# sourceMappingURL=Place.css.map */

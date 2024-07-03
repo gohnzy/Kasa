@@ -15,5 +15,6 @@ body main {
 @media (max-width: 767px) {
   body main {
     padding: 0 6vw;
+    gap: 25px;
   }
 }/*# sourceMappingURL=Main.css.map */

@@ -30,6 +30,9 @@ header {
         justify-content: space-between;
         gap: 50px;
         align-items: center;
+        @media (max-width:420px) {
+            justify-content: end;
+        }
         
         & a {
             font-family: Montserat;
@@ -72,6 +75,7 @@ header {
             @media (max-width:420px) {
                 font-size: 12px;
             }
+            
         }
         
         @media (max-width:1044px) {
@@ -81,6 +85,8 @@ header {
         @media (max-width:600px) {
             width: 50%;
         }
+
+        
     }
 }
 

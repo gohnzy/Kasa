@@ -13,10 +13,22 @@ footer img {
   width: 122px;
   height: 39.5px;
 }
+@media (max-width: 500px) {
+  footer img {
+    width: 102px;
+    height: 19.5px;
+  }
+}
 footer p {
   font-family: Montserat;
   font-weight: 500;
   font-size: 24px;
   text-align: center;
   color: white;
+}
+@media (max-width: 500px) {
+  footer p {
+    font-size: 13px;
+    width: 150px;
+  }
 }/*# sourceMappingURL=Footer.css.map */

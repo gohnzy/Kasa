@@ -10,7 +10,7 @@ export default function Header() {
 
     return (
         <header>
-            <img src={logo}alt="Logo Kasa"></img>
+            <Link to='/'> <img src={logo}alt="Logo Kasa"></img></Link>
             <nav>
                 <Link to="/">Accueil</Link>
                 <Link to="/about">À Propos</Link>

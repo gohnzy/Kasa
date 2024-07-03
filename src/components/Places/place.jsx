@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import '../../style/Pages/Places/Place.css'
+import { useState } from 'react'
 
 import fullStar from '../../datas/assets/Full_star.svg'
 import emptyStar from '../../datas/assets/Empty_star.svg'
@@ -20,23 +21,49 @@ const Place = ({ datas }) => {
     for (let i = 0; i < emptyStart; i++) {
         emptyStarsTable.push("star")
     }
-    
+
+  
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const pics = datas.pictures;
+
+    const handleNext = () => {
+        setCurrentIndex((nextIndex) => (nextIndex + 1) % pics.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + pics.length) % pics.length);
+    };
 
     return (
         <main id='place'>
-            <img src={datas.pictures[0]} alt="" />
+            <div id='place-gallery'>
+                <img 
+                    key={currentIndex} 
+                    src={pics[currentIndex]} 
+                    alt="Pas de photo pour ce logement" 
+                    id='displayed-image'
+                />
+                <i id='picture-count'>{currentIndex+1}/{datas.pictures.length}</i>
+                <img src={arrow} alt="left arrow" onClick={handlePrev} id='left-arrow'/>
+                <img src={arrow} alt="right arrow" onClick={handleNext} id='right-arrow'/>
+            </div>
+
             <section id='infos-banner'>
                 <div id='place-infos'>
-                    <h1>{datas.title}</h1> 
-                    <h2>{datas.location}</h2>
+                    <h1>{datas.title ? datas.title : "Sans titre"}</h1> 
+                    <h2>{datas.location ? datas.location : "Localisation inconnue"}</h2>
                     <ul>
-                        {datas.tags.map((tag, key) => 
+                        {datas.tags ? datas.tags.map((tag, key) => 
                             <li key={key}>{tag}</li>
-                        )}
+                        ) : ""}
                     </ul>
                 </div>
                 <div id='host-infos'>
-                    <img src={datas.host.picture} alt="Host Picture" />
+                    <div id='profil'>
+                        <h3>{datas.host ? datas.host.name : "Anonyme"} </h3>     
+                        <img src={datas.host ? datas.host.picture : ""} alt="Pas de photo de profil" />
+                    </div>
+                    
                     <p id='host-rating'>
                         {starsTable.map((star, index) => 
                             <img key={index} className="star" src={fullStar} alt='Rating Star'></img>
@@ -48,20 +75,28 @@ const Place = ({ datas }) => {
                 </div>
             </section>
             <section id='infos-dropdown'>
-                <div id='description' onClick={(e) => handleClick(e)}>
-                    <div>
-                        Description
-                        <img src={arrow} alt="dropdown-arrow-icon" />
-                    </div>
-                    <p>{datas.description}</p>
-                </div>
-                <div id='furnitures' onClick={(e) => handleClick(e)}>
-                    <div>
-                        Équipements
-                        <img src={arrow} alt="dropdown-arrow-icon" />
-                    </div>
-                    <p>{datas.equipments}</p>
-                </div>
+                <ul>
+                    <article id='description' onClick={(e) => handleClick(e)}>
+                        <div>
+                            Description
+                            <img src={arrow} alt="dropdown-arrow-icon" />
+                        </div>
+                        <p>{datas.description ? datas.description : "Pas encore de déscription"}</p>
+                    </article>
+                    <article id='furnitures' onClick={(e) => handleClick(e)}>
+                        <div>
+                            Équipements
+                            <img src={arrow} alt="dropdown-arrow-icon" />
+                        </div>
+                        <p id='equipements-list'>
+                            {datas.equipments ? datas.equipments.map((value, index) => (
+                                <li key={index} id='equipements-item'>{value}</li>
+                            )) : "Pas d'équipement renseigné"}
+                        </p>
+                        
+                    </article>
+                </ul>
+                
             </section>
         </main>
     )

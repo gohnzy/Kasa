@@ -19,6 +19,13 @@ section#gallery {
         padding: 40px;
     }
 
+    @media (max-width: 770px) {
+        gap: 30px;
+        padding: 0px;
+        background-color: white;
+        box-shadow: 0px 0px 0px 0px white;
+    }
+
     & a {
         display: flex;
         text-decoration: none;
@@ -30,6 +37,13 @@ section#gallery {
         @media (max-width: 1240px) {
             width: 300px;
             height: 300px;
+        }
+        @media (max-width: 770px) {
+            width: 100%;
+       
+        }
+        @media (max-width: 500px) {
+            height: 255px;
         }
 
         &:hover {
@@ -71,9 +85,6 @@ section#gallery {
             flex: 0 0 20%;
             background: -webkit-linear-gradient(bottom, #cd4f4f, #ff6060);
             
-            @media (max-width: 1240px) {
-                font-size: 16px;
-            }
         }
     }
 }

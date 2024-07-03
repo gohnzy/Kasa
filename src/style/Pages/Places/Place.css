@@ -7,8 +7,10 @@ main#place {
   margin: auto;
   gap: 0;
 }
-main#place div#place-gallery img#displayed-image {
+main#place div#place-gallery {
   position: relative;
+}
+main#place div#place-gallery img#displayed-image {
   max-width: 1240px;
   width: 100%;
   height: 415px;
@@ -36,37 +38,27 @@ main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#ri
   main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#right-arrow {
     width: 24px;
     height: 40px;
-    top: 31%;
+    top: 40%;
   }
 }
 @media (max-width: 500px) {
   main#place div#place-gallery img#left-arrow, main#place div#place-gallery img#right-arrow {
     width: 12px;
     height: 20px;
-    top: 33%;
+    top: 45%;
   }
 }
 main#place div#place-gallery img#left-arrow {
   transform: rotate(-90deg);
-  left: 12%;
-}
-@media (max-width: 767px) {
-  main#place div#place-gallery img#left-arrow {
-    left: 8%;
-  }
+  left: 2%;
 }
 main#place div#place-gallery img#right-arrow {
   transform: rotate(90deg);
-  right: 12%;
-}
-@media (max-width: 767px) {
-  main#place div#place-gallery img#right-arrow {
-    right: 8%;
-  }
+  right: 2%;
 }
 main#place div#place-gallery #picture-count {
   position: absolute;
-  top: 61%;
+  top: 90%;
   left: 50%;
   color: white;
   font-style: normal;
@@ -132,6 +124,8 @@ main#place section#infos-banner div#place-infos ul {
   gap: 15px;
   justify-content: start;
   align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
 }
 main#place section#infos-banner div#place-infos ul li {
   padding: 3px 20px;
@@ -177,7 +171,7 @@ main#place section#infos-banner div#host-infos {
 main#place section#infos-banner div#host-infos #profil {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: 10px;
 }
@@ -221,12 +215,11 @@ main#place section#infos-banner div#host-infos #host-rating .star {
     height: 13px;
   }
 }
-main#place section#infos-dropdown {
+main#place section#infos-dropdown ul {
+  padding: 0;
   max-width: 1240px;
   width: 100%;
   margin: auto;
-}
-main#place section#infos-dropdown ul {
   padding: 30px;
   box-sizing: border-box;
   margin: 0;
@@ -240,174 +233,6 @@ main#place section#infos-dropdown ul {
     flex-direction: column;
     max-width: 1240px;
     padding: 0px;
-    gap: 0;
+    gap: 0px;
   }
-}
-main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
-  position: relative;
-  max-width: 582px;
-  width: 100%;
-  border-radius: 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  position: relative;
-  height: 54px;
-  margin-bottom: 45px;
-  transition: height 0.3s ease-in-out;
-  overflow: hidden;
-}
-@media (max-width: 767px) {
-  main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
-    height: 41px;
-  }
-}
-@media (max-width: 500px) {
-  main#place section#infos-dropdown ul article#description, main#place section#infos-dropdown ul article#furnitures {
-    height: 30px;
-  }
-}
-main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-  height: 200px;
-  transition: height 0.3s ease-in-out;
-}
-@media (max-width: 605px) {
-  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-    height: 130px;
-  }
-}
-@media (max-width: 580px) {
-  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-    height: 135px;
-  }
-}
-@media (max-width: 490px) {
-  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-    height: 150px;
-  }
-}
-@media (max-width: 420px) {
-  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-    height: 160px;
-  }
-}
-@media (max-width: 405px) {
-  main#place section#infos-dropdown ul article#description.active, main#place section#infos-dropdown ul article#furnitures.active {
-    height: 170px;
-  }
-}
-main#place section#infos-dropdown ul article#description.active:nth-child(4), main#place section#infos-dropdown ul article#furnitures.active:nth-child(4) {
-  height: 200px;
-  transition: height 0.3s ease-in-out;
-}
-@media (max-width: 430px) {
-  main#place section#infos-dropdown ul article#description.active:nth-child(4), main#place section#infos-dropdown ul article#furnitures.active:nth-child(4) {
-    height: 250px;
-  }
-}
-main#place section#infos-dropdown ul article#description.active img, main#place section#infos-dropdown ul article#furnitures.active img {
-  transform: rotate(-180deg);
-  transition: transform 0.3s ease-in-out;
-}
-main#place section#infos-dropdown ul article#description.active p, main#place section#infos-dropdown ul article#furnitures.active p {
-  overflow-y: auto;
-  transform: scaleY(1);
-  opacity: 1;
-  transition: transform 0.3s ease-in-out;
-}
-main#place section#infos-dropdown ul article#description.active p#equipements-list, main#place section#infos-dropdown ul article#furnitures.active p#equipements-list {
-  transform: scaleY(1);
-  opacity: 1;
-  transition: transform 0.3s ease-in-out;
-}
-main#place section#infos-dropdown ul article#description:not(.active) p, main#place section#infos-dropdown ul article#furnitures:not(.active) p {
-  transition: 0.3s ease-in-out;
-}
-main#place section#infos-dropdown ul article#description:not(.active) img, main#place section#infos-dropdown ul article#furnitures:not(.active) img {
-  transition: transform 0.3s ease-in-out;
-}
-main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
-  background-color: #ff6060;
-  height: 52px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 30px;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-@media (max-width: 767px) {
-  main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
-    height: 41px;
-    font-size: 16px;
-  }
-}
-@media (max-width: 500px) {
-  main#place section#infos-dropdown ul article#description div, main#place section#infos-dropdown ul article#furnitures div {
-    height: 30px;
-    font-size: 13px;
-  }
-}
-main#place section#infos-dropdown ul article#description img, main#place section#infos-dropdown ul article#furnitures img {
-  width: 24px;
-  height: 14px;
-}
-@media (max-width: 500px) {
-  main#place section#infos-dropdown ul article#description img, main#place section#infos-dropdown ul article#furnitures img {
-    width: 16px;
-    height: 9px;
-  }
-}
-main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
-  position: relative;
-  transform: scaleY(0);
-  transform-origin: top;
-  background-color: #f6f6f6;
-  color: black;
-  font-size: 18px;
-  font-weight: 400;
-  border-radius: 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  margin: 0;
-  transition: transform 0.3s ease-in-out;
-  height: 150px;
-  overflow: auto;
-}
-@media (max-width: 767px) {
-  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
-    padding: 15px 15px 35px 15px;
-  }
-}
-main#place section#infos-dropdown ul article#description p li, main#place section#infos-dropdown ul article#furnitures p li {
-  list-style-position: inside;
-  margin-left: -15px;
-}
-@media (max-width: 767px) {
-  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 500px) {
-  main#place section#infos-dropdown ul article#description p, main#place section#infos-dropdown ul article#furnitures p {
-    font-size: 12px;
-  }
-}
-main#place section#infos-dropdown ul article#description p::-webkit-scrollbar, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar {
-  width: 8px;
-}
-main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-track, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-track {
-  background: transparent;
-}
-main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-thumb, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-thumb {
-  background: #dfdfdf;
-  border-radius: 25px;
-}
-main#place section#infos-dropdown ul article#description p::-webkit-scrollbar-thumb:hover, main#place section#infos-dropdown ul article#furnitures p::-webkit-scrollbar-thumb:hover {
-  background: #949494;
-}
-main#place section#infos-dropdown ul article#description p li, main#place section#infos-dropdown ul article#furnitures p li {
-  padding-left: 15px;
-  height: 20px;
 }/*# sourceMappingURL=Place.css.map */

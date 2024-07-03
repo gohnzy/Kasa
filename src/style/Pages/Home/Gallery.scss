@@ -12,6 +12,7 @@ section#gallery {
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
+    margin-bottom: 100px;
     box-shadow: 1px 1px 10px 0 rgba($color: #000000, $alpha: 0.25);
 
     @media (max-width: 1240px) {

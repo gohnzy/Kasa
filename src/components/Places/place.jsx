@@ -5,7 +5,7 @@ import { useState } from 'react'
 import fullStar from '../../datas/assets/Full_star.svg'
 import emptyStar from '../../datas/assets/Empty_star.svg'
 import arrow from '../../datas/assets/dropArrow.svg'
-import handleClick from '../DropdownEvent'
+import Dropdown from '../Dropdown'
 
 
 const Place = ({ datas }) => {
@@ -33,6 +33,12 @@ const Place = ({ datas }) => {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + pics.length) % pics.length);
     };
+
+    let infosTable = []
+    infosTable.push(
+        {key: 'Description', value: datas.description},
+        {key: 'Équipements', value: datas.equipments}
+    )
 
     return (
         <main id='place'>
@@ -76,27 +82,8 @@ const Place = ({ datas }) => {
             </section>
             <section id='infos-dropdown'>
                 <ul>
-                    <article id='description' onClick={(e) => handleClick(e)}>
-                        <div>
-                            Description
-                            <img src={arrow} alt="dropdown-arrow-icon" />
-                        </div>
-                        <p>{datas.description ? datas.description : "Pas encore de déscription"}</p>
-                    </article>
-                    <article id='furnitures' onClick={(e) => handleClick(e)}>
-                        <div>
-                            Équipements
-                            <img src={arrow} alt="dropdown-arrow-icon" />
-                        </div>
-                        <p id='equipements-list'>
-                            {datas.equipments ? datas.equipments.map((value, index) => (
-                                <li key={index} id='equipements-item'>{value}</li>
-                            )) : "Pas d'équipement renseigné"}
-                        </p>
-                        
-                    </article>
-                </ul>
-                
+                    <Dropdown table={infosTable} />
+                </ul>                
             </section>
         </main>
     )

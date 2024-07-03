@@ -6,8 +6,10 @@ main#place {
     gap: 0;
 
     & div#place-gallery {
+
+        position: relative;
         & img#displayed-image {
-            position: relative;
+           
             max-width: 1240px;
             width: 100%;
             height: 415px;
@@ -31,37 +33,30 @@ main#place {
             @media (max-width:767px) {
                 width: 24px;
                 height: 40px;
-                top: 31%;
+                top: 40%;
             }
     
             @media (max-width:500px) {
                 width: 12px;
                 height: 20px;
-                top: 33%;
+                top: 45%;
             }
         }
         
         & img#left-arrow {
             transform: rotate(-90deg);
-            left: 12%;
-    
-            @media (max-width:767px) {
-                left: 8%;
-            }
+            left: 2%;
+
         }
     
         & img#right-arrow {
             transform: rotate(90deg);
-            right: 12%;
-    
-            @media (max-width:767px) {
-                right: 8%;
-            }
+            right: 2%;
         }
     
         & #picture-count{
             position: absolute;
-            top: 61%;
+            top: 90%;
             left: 50%;
             color: white;
             font-style: normal;
@@ -125,6 +120,8 @@ main#place {
                 gap: 15px;
                 justify-content: start;
                 align-items: center;
+                list-style: none;
+                flex-wrap: wrap;
                 & li {
                     padding: 3px 20px;
                     height: 25px;
@@ -167,7 +164,7 @@ main#place {
             & #profil {
                 width: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: end;
                 align-items: center;
                 gap: 10px;
 
@@ -222,11 +219,12 @@ main#place {
     }
 
     & section#infos-dropdown {
-        max-width: 1240px;
-        width: 100%;
-        margin: auto;
-       
+
         & ul {
+            padding: 0;
+            max-width: 1240px;
+            width: 100%;
+            margin: auto;
             padding: 30px;
             box-sizing: border-box;
             margin: 0;
@@ -234,193 +232,15 @@ main#place {
             justify-content: space-between;
             align-items: start;
             gap: 50px;
-
+    
             @media (max-width:767px) {
                 flex-direction: column;
                 max-width: 1240px;
                 padding: 0px;
-                gap: 0;
+                gap: 0px;
             }
-
-            & article#description, article#furnitures {
-                position: relative;
-                max-width: 582px;
-                width: 100%;
-                border-radius: 10px;
-                color: white;
-                font-size: 18px;
-                font-weight: 700;
-                position: relative;
-                height: 54px;
-                margin-bottom: 45px;
-                transition: height 0.3s ease-in-out; 
-                overflow: hidden;
-
-                @media (max-width:767px) {
-                    height: 41px;
-                }
-
-                @media (max-width:500px) {
-                    height: 30px;
-                }
-
-                
-            &.active {
-                height: 200px; 
-                transition: height 0.3s ease-in-out; 
-
-                @media (max-width: 605px) {
-                    height: 130px;
-                }
-                @media (max-width: 580px) {
-                    height: 135px;
-                }
-                @media (max-width: 490px) {
-                    height: 150px;
-                }
-
-                @media (max-width: 420px) {
-                    height: 160px;
-                }
-
-                @media (max-width: 405px) {
-                    height: 170px;
-                }
-            }
-        
-            
-            &.active:nth-child(4) {
-                height: 200px; 
-                transition: height 0.3s ease-in-out; 
-
-                @media (max-width: 430px) {
-                    height: 250px;
-                }
-            }
-        
-            &.active img {
-                transform: rotate(-180deg);
-                transition: transform 0.3s ease-in-out;
-            }
-        
-            &.active p {
-                
-                overflow-y: auto;
-                transform: scaleY(1);
-                opacity: 1;
-                transition: transform 0.3s ease-in-out;
-            }
-        
-            &.active p#equipements-list {
-                transform: scaleY(1);
-                opacity: 1;
-                transition: transform 0.3s ease-in-out;
-            }
-        
-            &:not(.active) p {
-                transition: 0.3s ease-in-out;
-            }
-        
-            &:not(.active) img {
-                transition: transform 0.3s ease-in-out;
-            }
-    
-            & div {
-                background-color: $mainColor;
-                height: 52px;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0px 30px;
-                border-radius: 10px;
-                box-sizing: border-box;
-                @media (max-width:767px) {
-                    height: 41px;
-                    font-size: 16px;
-                }
-
-                @media (max-width:500px) {
-                    height: 30px;
-                    font-size: 13px;
-                }
-            }
-        
-
-            & img {
-                width: 24px;
-                height: 14px;
-
-                @media (max-width:500px) {
-                    width: 16px;
-                    height: 9px;
-                }
-            }
-
-            & p {
-                position: relative;
-                transform: scaleY(0);
-                transform-origin: top;
-                background-color: $contrastColor;
-                color: black;
-                font-size: 18px;
-                font-weight: 400;
-                border-radius: 10px;
-                padding: 15px;
-                box-sizing: border-box;
-                margin: 0;
-                transition: transform 0.3s ease-in-out; 
-                height: 150px;
-                overflow: auto;
-
-                @media (max-width:767px) {
-                    padding: 15px 15px 35px 15px;
-                }
-
-                & li {
-                    list-style-position: inside;
-                    margin-left: -15px;
-                }
-
-                @media (max-width:767px) {
-                    font-size: 16px;
-                }
-                @media (max-width:500px) {
-                    font-size: 12px;
-                }
-
-                &::-webkit-scrollbar {
-                    width: 8px;
-                }
-
-                &::-webkit-scrollbar-track {
-                    background: transparent;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    background: #dfdfdf;
-                    border-radius: 25px;
-                }
-
-                &::-webkit-scrollbar-thumb:hover {
-                    background: #949494;
-                }
-
-
-                & li {
-                    padding-left: 15px;
-                    height: 20px;
-
-                }
-
-            }
-            }
-    
         }
-
-       
+        
     }
-
-    
    
 }

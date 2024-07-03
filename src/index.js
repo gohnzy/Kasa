@@ -31,8 +31,8 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path='' element={<main><Banner /><Gallery /></main>} />
-        <Route path='about' element={<main><Banner /><Values /></main>} />
+        <Route path='' element={<main id='home'><Banner /><Gallery /></main>} />
+        <Route path='about' element={<main id='about'><Banner /><Values /></main>} />
         <Route path='/places/:id' element={<ThisPlace />} />
         <Route path='*' element={<Error />} />
       </Routes>

@@ -1,11 +1,15 @@
  body {
     margin: 0;
-
+    height: 100%;
+    
     & main {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: start;
         gap: 50px;
+        min-height: 67.1vh;
+        margin: 0;
 
         @media (max-width:1280px) {
             padding: 0 3vw;

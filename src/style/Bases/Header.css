@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import './Fonts.css';
 header {
+  height: 5vh;
   margin: 50px auto;
   max-width: 1240px;
   width: 100%;

@@ -26,7 +26,7 @@ li.active {
 }
 @media (max-width: 766px) {
   li.active {
-    height: 220px;
+    height: 150px;
   }
 }
 li.active:nth-child(4) {
@@ -115,7 +115,7 @@ li p {
 @media (max-width: 767px) {
   li p {
     font-size: 14px;
-    height: 151px;
+    height: 71px;
   }
 }
 @media (max-width: 500px) {

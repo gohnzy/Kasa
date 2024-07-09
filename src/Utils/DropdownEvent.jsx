@@ -1,6 +1,6 @@
 const handleClick = (event) => {
     let parent 
-    parent = event.target.closest('li'); // Trouver le parent <li> le plus proche
+    parent = event.target.closest('li');
 
     if(event.target.getAttribute("id", "equipements-item")) {
         parent = event.target.closest('article')

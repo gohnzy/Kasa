@@ -7,4 +7,21 @@ section#values {
 }
 section#values ul {
   padding: 0;
+}
+section#values ul li.active {
+  height: 150px;
+  transition: height 0.3s ease-in-out;
+}
+@media (max-width: 766px) {
+  section#values ul li.active {
+    height: 120px;
+  }
+}
+section#values ul li p {
+  height: 80px;
+}
+@media (max-width: 767px) {
+  section#values ul li p {
+    height: 51px;
+  }
 }/*# sourceMappingURL=KasaValues.css.map */

@@ -5,5 +5,25 @@ section#values {
 
     & ul {
         padding: 0;
+
+        & li {
+
+            &.active {
+                height: 150px; 
+                transition: height 0.3s ease-in-out; 
+        
+                @media (max-width: 766px) {
+                    height: 120px;
+                }
+            }
+
+            & p {
+                height: 80px;
+
+                @media (max-width:767px) {
+                    height: 51px;
+                }
+            }
+        }
     }
 }

@@ -49,9 +49,15 @@ const Place = ({ datas }) => {
                     alt="Pas de photo pour ce logement" 
                     id='displayed-image'
                 />
-                <i id='picture-count'>{currentIndex+1}/{datas.pictures.length}</i>
-                <img src={arrow} alt="left arrow" onClick={handlePrev} id='left-arrow'/>
-                <img src={arrow} alt="right arrow" onClick={handleNext} id='right-arrow'/>
+                {datas.pictures.length > 1 ?  (
+                    <>
+                        <i id='picture-count'>{currentIndex+1}/{datas.pictures.length}</i>
+                        <img src={arrow} alt="left arrow" onClick={handlePrev} id='left-arrow'/>
+                        <img src={arrow} alt="right arrow" onClick={handleNext} id='right-arrow'/>
+                    </>
+                  
+                ) : null}
+                
             </div>
 
             <section id='infos-banner'>

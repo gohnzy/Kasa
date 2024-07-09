@@ -51,24 +51,9 @@ header nav a {
   display: inline-block; /* Nécessaire pour que le pseudo-élément s'ajuste à la taille du texte */
   cursor: pointer;
   text-decoration: none;
-  /* Pseudo-élément pour l'animation de soulignement */
-  /* Animation au survol */
 }
-header nav a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px; /* Hauteur de la ligne de soulignement */
-  bottom: 0;
-  left: 0;
-  background-color: black; /* Couleur de la ligne de soulignement */
-  transform: scaleX(0); /* Réduire l'échelle sur l'axe X à 0 */
-  transform-origin: right; /* Point d'origine de la transformation à droite */
-  transition: transform 0.3s ease; /* Transition douce pour l'animation */
-}
-header nav a:hover::after {
-  transform: scaleX(1); /* Agrandir l'échelle sur l'axe X à 1 */
-  transform-origin: left; /* Point d'origine de la transformation à gauche */
+header nav a.active {
+  text-decoration: underline;
 }
 @media (max-width: 1044px) {
   header nav a {
